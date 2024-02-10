@@ -10,7 +10,9 @@ document.addEventListener('keydown', function(event) {
         var leftpx = square.style.left;
         if(leftpx){
             var currentLeft = numberFromPixels(leftpx);
-            var newleft = currentLeft + 20;
+            if(currentLeft < 680){
+                var newleft = currentLeft + 20;
+            }
             square.style.left = newleft + 'px';
         } else {
             square.style.left = "20px";
@@ -21,8 +23,10 @@ document.addEventListener('keydown', function(event) {
         var leftpx = square.style.left;
         if(leftpx){
             var currentLeft = numberFromPixels(leftpx);
-            var newleft = currentLeft - 20;
-            square.style.left = newleft + 'px';
+            if(currentLeft > 0){
+                var newleft = currentLeft - 20;
+            }
+                square.style.left = newleft + 'px';
         } else {
             square.style.left = "20px";
         }
@@ -32,7 +36,9 @@ document.addEventListener('keydown', function(event) {
         var toppx = square.style.top;
         if(toppx){
             var currenttop = numberFromPixels(toppx);
-            var newtop = currenttop + 20;
+            if (currenttop < 680){
+                var newtop = currenttop + 20;
+            }
             square.style.top = newtop + 'px';
         } else {
             square.style.top = "20px";
@@ -43,7 +49,9 @@ document.addEventListener('keydown', function(event) {
         var toppx = square.style.top;
         if(toppx){
             var currenttop = numberFromPixels(toppx);
-            var newtop = currenttop - 20;
+            if (currenttop >0){
+                var newtop = currenttop - 20;
+            }
             square.style.top = newtop + 'px';
         } else {
             square.style.top = "20px";
